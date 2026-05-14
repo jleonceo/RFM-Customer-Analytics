@@ -82,13 +82,13 @@ Otros → Resto
 
 ### 1. Segmentación de Clientes
 
-![Segmentación](imagenes/01_segmentacion_barras.png)
+![Segmentación](01_segmentacion_barras.png)
 
 Los "Otros" son mayoría (342) pero Champions generan 28x más valor.
 
 ### 2. Mapa RFM: Recency vs Monetary
 
-![Mapa RFM](imagenes/02_rfm_scatter.png)
+![Mapa RFM](02_rfm_scatter.png)
 
 - **Arriba-derecha** (amarillo): Champions - recientes y alto gasto
 - **Centro** (gris): Leales - buen valor
@@ -97,7 +97,7 @@ Los "Otros" son mayoría (342) pero Champions generan 28x más valor.
 
 ### 3. Matriz de Correlación
 
-![Correlación](imagenes/03_correlacion_heatmap.png)
+![Correlación](03_correlacion_heatmap.png)
 
 Los scores reflejan fielmente las métricas originales.
 
