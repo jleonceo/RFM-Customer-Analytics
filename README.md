@@ -157,16 +157,18 @@ Los scores reflejan fielmente las métricas originales.
 ---
 
 ## 📁 Estructura del Proyecto
-Caso1_Customer_Analytics/
-├── raw_data_12meses.csv
-├── 01_Analisis_RFM_Completo.ipynb
-├── README.md
-├── sql/
-│ └── scripts SQL de referencia
-└── imagenes/
+
+```
+RFM-Customer-Analytics/
+├── 01_Analisis_RFM_Completo.ipynb   # Análisis completo: RFM, segmentación y gráficos
+├── Script_Datos_Sinteticos.ipynb    # Generador del dataset sintético
+├── raw_data_12meses.csv             # Dataset principal (12 meses)
+├── raw_data.csv                     # Dataset auxiliar
 ├── 01_segmentacion_barras.png
 ├── 02_rfm_scatter.png
 └── 03_correlacion_heatmap.png
+```
+
 ---
 
 ## 🚀 Cómo Reproducir
@@ -185,22 +187,34 @@ pip install pandas matplotlib seaborn
 
 # Ejecutar notebook
 jupyter notebook 01_Analisis_RFM_Completo.ipynb
+```
 
-Ejecución
-Ejecutar celda 1: Cargar datos
-Ejecutar celdas 2-4: Calcular RFM
-Ejecutar validación
-Ejecutar celdas 5-7: Generar gráficos
-Dataset
-raw_data_12meses.csv:
-7,741 transacciones
-946 clientes
-Período: Junio 2022 - Junio 2023
-🛠️ Tecnologías
-Python 3.9+
-Pandas, Matplotlib, Seaborn
-Jupyter Notebook
-📝 Notas
-Datos sintéticos: Fines educativos/portfolio
-Período: 12 meses simulados
-Escalabilidad: Funciona con 100K+ transacciones
+### Ejecución
+
+1. Ejecutar celda 1: Cargar datos
+2. Ejecutar celdas 2-4: Calcular RFM
+3. Ejecutar validación
+4. Ejecutar celdas 5-7: Generar gráficos
+
+### Dataset
+
+`raw_data_12meses.csv`:
+- 7,741 transacciones
+- 946 clientes
+- Período: Junio 2022 - Junio 2023
+
+---
+
+## 🛠️ Tecnologías
+
+- Python 3.9+
+- Pandas, Matplotlib, Seaborn
+- Jupyter Notebook
+
+---
+
+## 📝 Notas
+
+- **Datos sintéticos**: generados con `Script_Datos_Sinteticos.ipynb` — fines educativos/portfolio. Las cifras de impacto y ROI son ilustrativas del método, no resultados reales.
+- **Período**: 12 meses simulados
+- **Escalabilidad**: el método funciona igual con 100K+ transacciones
