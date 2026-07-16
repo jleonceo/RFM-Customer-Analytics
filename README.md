@@ -1,4 +1,4 @@
-# Análisis RFM de clientes — E-commerce
+# Análisis RFM de clientes · E-commerce
 
 Segmentación de clientes mediante análisis RFM (Recency, Frequency, Monetary) para
 identificar patrones de comportamiento y orientar estrategias de retención.
