@@ -212,7 +212,7 @@ Este análisis es una pieza de un portfolio de casos de analítica. Las piezas h
 ## English
 
 RFM (Recency, Frequency, Monetary) segmentation of an e-commerce customer base, built to
-surface behaviour patterns and point retention effort where it pays off.
+surface behaviour patterns and aim retention effort where it pays off.
 
 > The data is **synthetic**, generated for portfolio purposes (`Script_Datos_Sinteticos.ipynb`).
 > The impact and ROI figures **illustrate the method; they are not real results**.
@@ -231,8 +231,8 @@ surface behaviour patterns and point retention effort where it pays off.
 ### Executive summary
 
 946 customers and 7,741 transactions over 12 months, scored with RFM and grouped into
-segments that each map to a business action. The amounts are illustrative, on a synthetic
-dataset.
+segments, with a business action proposed for the ones that move the needle. The amounts
+are illustrative, on a synthetic dataset.
 
 ### Main findings
 
@@ -241,7 +241,7 @@ dataset.
 - **59 New** customers with little engagement: room to build loyalty.
 - **342 Others** (36%) average just $550: poor return on effort.
 
-**Potential impact (illustrative)**: $2.3M on top, at 35:1.
+**Potential impact (illustrative)**: an extra $2.3M, at a 35:1 ROI.
 
 ---
 
@@ -257,11 +257,11 @@ dataset.
 | New | 59 | 6% | $528 | 13 days | 2.5 |
 | Others | 342 | 36% | $550 | 144 days | 2.3 |
 
-### Model check
+### Model validation
 
-- R_Score against Recency: -0.83
+- R_Score vs Recency: -0.83
 - F_Score against Frequency: 0.87
-- M_Score against Monetary: 0.76
+- M_Score vs Monetary: 0.76
 
 ---
 
@@ -300,7 +300,7 @@ Others    → everything else
 
 "Others" is the largest group (342), yet Champions are worth 28 times more.
 
-### 2. RFM map: Recency against Monetary
+### 2. RFM map: Recency vs Monetary
 
 ![RFM map](02_rfm_scatter.png)
 
@@ -340,7 +340,7 @@ invitation-only events.
 
 **Goal**: turn the 59 New customers into Loyal ones.
 
-**Tactics**: email automation, a discount that steps up, gamification.
+**Tactics**: email automation, an escalating discount, gamification.
 
 **Impact**: $42.5K · 4:1.
 
@@ -415,4 +415,4 @@ This analysis is one piece of an analytics portfolio. Its sibling projects:
 
 ---
 
-*Parte del portfolio de [Juan Luis León](https://github.com/jleonceo) · [juanluisleon.vercel.app](https://juanluisleon.vercel.app) · Licencia [MIT](LICENSE)*
+*Parte del portfolio de / Part of [Juan Luis León](https://github.com/jleonceo)'s portfolio · [juanluisleon.vercel.app](https://juanluisleon.vercel.app) · Licencia / License: [MIT](LICENSE)*
