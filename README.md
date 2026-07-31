@@ -19,7 +19,7 @@ mundo ordena por facturación y baja por la lista. Ese orden esconde justo lo qu
 En estos datos vive el cliente 1029. Compró veintidós veces y dejó 20.637 dólares, así que aparece
 arriba en cualquier informe anual de ventas. Lleva dos meses sin volver. El acumulado de doce meses
 no lo dice en ninguna parte. Ese acumulado mete en un solo número lo que pasó en junio y lo que pasó
-la semana pasada. Una vez sumado, las dos cosas ya no se distinguen. Cuando alguien se da cuenta,
+la semana pasada; una vez sumado, las dos cosas ya no se distinguen. Cuando alguien se da cuenta,
 ese cliente ya compra en otro sitio. El aviso llevaba meses escrito en las fechas de sus pedidos.
 Nadie las lee. Recorrerlas una a una para 946 clientes no es trabajo de una persona.
 
@@ -58,10 +58,10 @@ bloques rinde de forma muy distinta.
 
 Falta decidir dónde va la raya de cada grupo. Ahí se usan quintiles. **Quintil** se llama a cada una
 de las cinco partes iguales en que se corta una lista ordenada. El quinto de clientes que más gasta
-recibe un 5, el siguiente un 4, y así hasta el 1. Casi todo el mundo lo haría a ojo. Cliente bueno
-el que pasa de 5.000 dólares. Cliente dormido el que lleva más de tres meses sin comprar. El
-problema de esos números está en su origen. Los pone alguien de memoria. Valen para un sector y no
-para otro. Y envejecen solos en cuanto suben los precios o cambia la estación.
+recibe un 5, el siguiente un 4, y así hasta el 1. Casi todo el mundo lo haría a ojo: cliente bueno
+el que pasa de 5.000 dólares, cliente dormido el que lleva más de tres meses sin comprar. El
+problema de esos números está en su origen, porque los pone alguien de memoria y valen para un
+sector y no para otro. Y envejecen solos en cuanto suben los precios o cambia la estación.
 
 Con quintiles el corte no se inventa, se lee de tu propia cartera. Los que salen en estos datos son
 los siguientes:
@@ -115,8 +115,8 @@ sobre estos datos, la diferencia de valor entre los dos es de 29,28 veces.
 ![Mapa RFM](02_rfm_scatter.png)
 
 El mapa cruza los días que lleva sin comprar cada cliente con el dinero que ha dejado. Arriba a la
-derecha, en amarillo, están los Champions, recientes y de alto gasto. En el centro, en gris, los
-Leales. A la izquierda, en rojo, los que llevan meses callados. Abajo, en verde y azul, quedan
+derecha, en amarillo, están los Champions, recientes y de alto gasto; en el centro, en gris, los
+Leales; a la izquierda, en rojo, los que llevan meses callados. Abajo, en verde y azul, quedan
 Nuevos y Otros.
 
 ### El cuaderno se comprueba a sí mismo
@@ -124,7 +124,7 @@ Nuevos y Otros.
 ![Correlación](03_correlacion_heatmap.png)
 
 El cuaderno pasa nueve verificaciones sobre su propio trabajo antes de dibujar nada. Que los
-Champions tengan de media menos de treinta días sin comprar. Que los Nuevos compren poco. Que la
+Champions tengan de media menos de treinta días sin comprar, que los Nuevos compren poco, que la
 puntuación de recencia baje cuando los días suben. Las nueve salen en verde con los datos de hoy.
 
 Tres de esas comprobaciones son correlaciones entre cada puntuación y el número del que sale. Una
@@ -156,8 +156,8 @@ grupos. Coinciden también sus medias y las tres correlaciones, hasta el último
 **El generador de datos no arranca al clonarlo.** Pide un entorno de Python privado del ordenador de
 su autor, llamado `conda-env-accident_agent-py`. Ese entorno es encima el de otro proyecto distinto.
 Un cambio de julio arregló ese mismo defecto en el cuaderno de análisis. Al generador lo dejó como
-estaba. Forzándole el intérprete a mano funciona y reproduce el fichero exacto. El fallo está en la
-etiqueta y no en el programa.
+estaba. Forzándole el intérprete a mano funciona y reproduce el fichero exacto, así que el fallo
+está en la etiqueta y no en el programa.
 
 **Una cuenta mal copiada dentro del cuaderno.** Su resumen afirma que los Champions gastan «3x más
 que Leales, 28x más que Nuevos». Lo medido da 2,49 y 29,28. Ese 28 existe, pero contra el grupo
@@ -165,7 +165,7 @@ Otros. Se coló al pasarlo de un sitio a otro.
 
 **La frontera del quintil es frágil por construcción.** El quintil compara a cada cliente contra los
 demás, así que el corte se mueve cuando cambia la cartera. Dos clientes casi idénticos pueden caer a
-lados distintos de la raya. Con sesenta días sin comprar, el cliente 1029 sale En riesgo. El 1120,
+lados distintos de la raya. Con sesenta días sin comprar, el cliente 1029 sale En riesgo; el 1120,
 con cincuenta y nueve días y las mismas veintidós compras, sale Leal. Por un día de diferencia uno
 recibe campaña de recuperación y el otro no.
 
@@ -273,13 +273,13 @@ Most people sort by revenue and work down the list. That order hides exactly wha
 Customer 1029 lives in this data. They bought twenty-two times and left 20,637 dollars, so they show
 up near the top of any annual sales report. They have not been back for two months. The twelve-month
 total says that nowhere. That total puts what happened in June and what happened last week into one
-number. Once added up, the two are no longer distinguishable. By the time anyone notices, that
+number; once added up, the two are no longer distinguishable. By the time anyone notices, that
 customer is buying elsewhere. The warning had been written in the dates of their orders for months.
 Nobody reads those dates. Going through them one by one for 946 customers is not a job for a person.
 
-This repository takes that order list and boils each customer down to three numbers. Then it splits
-the base into five groups and proposes a commercial action for each one. The method is called RFM.
-Any marketing team with a customer base can use it.
+This repository takes that order list, boils each customer down to three numbers, splits the base
+into five groups and proposes a commercial action for each one. The method is called RFM. Any
+marketing team with a customer base can use it.
 
 ### The three letters
 
@@ -304,17 +304,16 @@ other and differ from those outside. That way each group can be handled its own 
 a campaign for 946 different people, they design four or five. The whole question becomes which
 bucket each customer falls into.
 
-Is splitting worth it? In this data the 246 Champions are 26% of the base and 66.5% of sales. The
-401 customers in New and Others together are 42.4% of the base. Between them they account for 3.8%
-of sales. Spreading the same commercial effort evenly across those two blocks pays off very
-differently.
+Is splitting worth it? In this data the 246 Champions are 26% of the base and 66.5% of sales, while
+the 401 customers in New and Others together account for 42.4% of the base and 3.8% of sales.
+Spreading the same commercial effort evenly across those two blocks pays off very differently.
 
 What remains is deciding where each group's line goes. That is the job of quintiles. A **quintile**
 is each of the five equal parts an ordered list is cut into. The fifth of customers who spend most
-get a 5, the next one a 4, and so on down to 1. Most people would do it by eye. A good customer
-spends over 5,000 dollars. A dormant one has been quiet for more than three months. The trouble with
-those numbers is where they come from. Somebody sets them from memory. They suit one sector and not
-another. And they age on their own as soon as prices rise or the season turns.
+get a 5, the next one a 4, and so on down to 1. Most people would do it by eye: a good customer
+spends over 5,000 dollars, a dormant one has been quiet for more than three months. The trouble with
+those numbers is where they come from, because somebody sets them from memory and they suit one
+sector and not another. And they age on their own as soon as prices rise or the season turns.
 
 With quintiles the cut-off is not invented, it is read off your own customer base. The ones that
 come out in this data are the following:
@@ -327,7 +326,7 @@ come out in this data are the following:
 | p80 | 121 days | 13 purchases | $8,489 |
 
 Look at the monetary column. Those 5,000 dollars that looked like the bar for a good customer fall
-between 3,537 and 8,489. That lands in the middle of the fourth group out of five, neither the best
+between 3,537 and 8,489, that is, in the middle of the fourth group out of five, neither the best
 nor the average. Set by hand, that threshold would have called an ordinary customer excellent.
 
 ### The three-digit code
@@ -416,7 +415,7 @@ Loyal, 28x more than New". The measurement gives 2.49 and 29.28. That 28 does ex
 Others group. It slipped while being moved from one place to another.
 
 **The quintile boundary is fragile by construction.** A quintile compares each customer against the
-rest, so the cut-off moves when the base changes. Two nearly identical customers can land on
+rest, so the cut-off moves when the base changes, and two nearly identical customers can land on
 opposite sides of the line. At sixty days without buying, customer 1029 comes out At Risk. Customer
 1120, at fifty-nine days and with the same twenty-two purchases, comes out Loyal. One day apart, one
 gets a win-back campaign and the other does not.
@@ -440,8 +439,8 @@ The notebook ignores it.
 
 The three actions below are an exercise. They show how a business case is presented on top of the
 segmentation. Before reading them, it is worth looking at their size. Sales over the twelve months
-add up to 5.71 million dollars. The impact proposed here is 2.3 million, that is, 40% of the entire
-turnover. The VIP programme alone promises to raise spending by 55% among customers who already
+add up to 5.71 million dollars and the impact proposed here is 2.3 million, that is, 40% of the
+entire turnover. The VIP programme alone promises to raise spending by 55% among customers who already
 spend the most. Reading these as a forecast of what will happen would be a mistake.
 
 **A VIP programme for the 246 Champions.** Forty-eight hour early access, a dedicated account
@@ -467,7 +466,7 @@ the method can be taught without publishing real customers. The return figures i
 illustrate a format rather than a result.
 
 The method does not explain everything either, because RFM looks at sales and nothing else. It knows
-nothing about the margin on each product or the cost of serving each customer. The one who bills
+nothing about the margin on each product or the cost of serving each customer, so the one who bills
 most may not be the one who leaves most behind. It does not say why somebody left either. Support
 incidents, the treatment they got and what the competition offers leave no trace whatsoever in an
 order list.
@@ -497,12 +496,12 @@ pip install pandas matplotlib seaborn
 jupyter notebook 01_Analisis_RFM_Completo.ipynb
 ```
 
-The notebook runs from top to bottom. The first cell loads the data, the next ones compute the three
-numbers and the scores, then come the nine checks, and the three charts close it.
+The notebook runs from top to bottom. The first cell loads the data. The next ones compute the three
+numbers and the scores. Then come the nine checks. The three charts close it.
 
 ### Related repositories
 
-This analysis is one piece of an analytics portfolio, alongside the sibling projects that follow:
+This analysis is one piece of an analytics portfolio. These are the sibling projects:
 
 - [lead-scoring-ml](https://github.com/jleonceo/lead-scoring-ml): predicting which lead ends up buying, with classification models.
 - [accident-intelligent-agent](https://github.com/jleonceo/accident-intelligent-agent): ETL, exploration and a model to predict how severe a road accident is.
