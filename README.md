@@ -25,6 +25,24 @@ yendo.
 
 ## El método
 
+```mermaid
+flowchart TD
+    P[7.741 pedidos de 946 clientes] --> R[Recencia<br/>días desde la última compra]
+    P --> F[Frecuencia<br/>número de compras]
+    P --> M[Importe<br/>gasto total]
+    R & F & M --> Q[Puntuación de 1 a 5<br/>por quintiles]
+    Q --> G1{Primera regla que cumple}
+    G1 --> C1[Champions]
+    G1 --> C2[Leales]
+    G1 --> C3[Nuevos]
+    G1 --> C4[En riesgo]
+    G1 --> C5[Otros]
+    C1 & C2 & C3 & C4 & C5 --> A[Una acción comercial<br/>por grupo]
+    style G1 fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style A fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+```
+
+
 **RFM** son las iniciales inglesas de recencia, frecuencia e importe. Por cada cliente se calculan tres números:
 - recencia: días desde la última compra;
 - frecuencia: número de compras;

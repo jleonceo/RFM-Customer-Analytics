@@ -25,6 +25,24 @@ are leaving.
 
 ## The method
 
+```mermaid
+flowchart TD
+    P[7,741 orders from 946 customers] --> R[Recency<br/>days since last purchase]
+    P --> F[Frequency<br/>number of purchases]
+    P --> M[Monetary<br/>total spend]
+    R & F & M --> Q[Score from 1 to 5<br/>by quintiles]
+    Q --> G1{First rule that applies}
+    G1 --> C1[Champions]
+    G1 --> C2[Loyal]
+    G1 --> C3[New]
+    G1 --> C4[At risk]
+    G1 --> C5[Others]
+    C1 & C2 & C3 & C4 & C5 --> A[One sales action<br/>per group]
+    style G1 fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style A fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+```
+
+
 **RFM** stands for recency, frequency and monetary value. Three numbers are computed for each customer:
 - recency: days since the last purchase;
 - frequency: number of purchases;
