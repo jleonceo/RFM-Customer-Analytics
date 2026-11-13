@@ -18,9 +18,9 @@ The data is synthetic: 946 customers and 7,741 orders over twelve months, genera
 
 ## The problem
 
-A sales team cannot call every customer each week, and it nearly always sorts by turnover. That order hides the
+A sales team cannot call every customer each week. It nearly always sorts by turnover. That order hides the
 valuable customer who has stopped buying. In this data, customer 1029 bought twenty-two times and spent 20,637
-dollars, and has not come back for two months. The yearly total puts them at the top and gives no warning that they
+dollars. They have not come back for two months. The yearly total puts them at the top and gives no warning that they
 are leaving.
 
 ## The method
